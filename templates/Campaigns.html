@@ -1,178 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="https://kit.fontawesome.com/bb14fd2e01.js" crossorigin="anonymous"></script>
-    
-</head>
-<body>
-    <div class="ofervlow hidden"></div>
-    <header class="header">
-        <nav class="header__top">
-            <div class="header__top--left">
-                <ul>
-                    <li><a href="https://www.rabitabank.com/bank-haqqinda/umumi-melumat"><i class="fa-solid fa-window-maximize"></i> <span>Ümumi məlumat</span></a></li>
-                    <li><a href="https://www.rabitabank.com/filial-ve-bankomatlar/filiallar"><i class="fa-solid fa-map-location"></i><span>Filial və bankomatlar</span></a></li>
-                </ul>
-            </div>
-            <div class="header__top--right">
-                <div class="header__top--button">
-                    <a href="https://30il.rabitabank.com/">Rabitəbank 30 il</a>
-                </div>
-                <div class="header__top--dark">
-                    <span><i class="fa-regular fa-sun"></i></span>
-                    <!-- <i class="fa-solid fa-moon"></i> -->
-                    
-                </div>
-                <div class="header__top--language">
-                    <label for="cars">Aze</label>
+{% extends 'base.html' %}
 
-                    <select id="cars">
-                      <option value="Ru">Ru</option>
-                      <option value="En">En</option>
-                    </select>
-                </div>
-            </div>
-        </nav>
-        <div class="sticky">
-        <nav class="header__center">
-            <div class="header__center--left">
-                <a href="./home.html" class="header__center--logo">
-                    <img src="../img/rabitebank-logo.svg" alt="">
-                </a>
-                <div class="header__center--category">
-                    <ul>
-                        <li><i class="fa-solid fa-user"></i> <span>Personal</span></li>
-                        <li><i class="fa-solid fa-business-time"></i> <span>Business</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header__center--right">
-                <ul>
-                    <li class="heder-call"><a href="tel:133"><i class="fa-solid fa-phone-volume"></i> <span>133</span></a></li>
-                    <li class="heder-internet"><a href="https://ib.rabitabank.com/InterBank/#/"><i class="fa-regular fa-circle-right"></i> <span>İnternet Banking</span></a></li>
-                </ul>
-            </div>
-        </nav>
-        <nav class="header__button">
-            <div class="header__button--left">
-                <ul>
-                    <li><a href="">Loans</a></li>
-                    <li><a href=""><img src="../img/header_card.webp" alt="">Cards</a></li>
-                    <li><a href="">Deposits</a></li>
-                    <li class="dowloud-open"><span>...</span>
-                     <div class="headerDowloud hidden">
-                        <div class="headerDowloud__left">
-                            <div class="headerDowloud__left--top">
-                                <ul>
-                                    <li>
-                                        <h3>Loans</h3>
-                                        <a href="https://www.rabitabank.com/individual-customer/loans-rabitabank/cash-loan">Cash loan</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/loans-rabitabank/mortgage-loan">Mortgage loan</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/loans-rabitabank/lombard-loan">Lombard loan</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/loans-rabitabank/special-mortgage-loan-offer-from-mida">Special mortgage loan offer from "MİDA"</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/loans-rabitabank">All loans</a>
-                                    </li>
-                                    <li>
-                                        <h3>Cards</h3>
-                                        <a href="https://www.rabitabank.com/individual-customer/cards/kartmanedebet">Kartmane Debit</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en">Kartmane Credit</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/cards/kartmanepremium">Kartmane Premium</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/cards/kartmane-non-resident">Kartmane Card for Non-Residents</a>
-                                    </li>
-                                    <li>
-                                        <h3>Deposits</h3>
-                                        <a href="https://www.rabitabank.com/individual-customer/deposits-eng/universal-deposit-eng">Universal Deposit</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/deposits-eng/child-savings-deposit">Child savings deposit</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/deposits-eng/deposit-safes">Deposit safes</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/deposits-eng/depozit-eng-2">Savings deposit</a>
-                                    </li>
-                                    <li>
-                                        <h3>Online services</h3>
-                                        <a href="https://www.rabitabank.com/individual-customer/loans-rabitabank">Order a Loan</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/cards/kartmanedebet">Order a Card - Kartmane Debet</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en">Order a Card - Kartmane Credit</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/online-services/online-payments">Online Payments</a>
-                                        <a href="https://ib.rabitabank.com/Azericard?lang=en">Online Loan Payment</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/online-services/sms-notifications">SMS Notifications</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/online-services/online-turn">Online Queue</a>
-                                    </li>
-                                    <li>
-                                        <h3>Other services</h3>
-                                        <a href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb">Money Transfers</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/other-services/settlement-and-cash-transactions">Settlement and cash transactions</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/deposits-eng/deposit-safes">Deposit safes</a>
-                                        <a href="https://www.rabitabank.com/individual-customer/other-services/insurance-services"> services</a>
-                                        <a href="https://www.rabitabank.com/branches-atms">Service network</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="headerDowloud__left--button">
-                                <ul>
-                                    
-
-
-
-                                    <li><a href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb">Money transfers</a></li>
-                                    <li><a href="./Campaigns.html">Campaigns</a></li>
-                                    <li><a href="https://www.rabitabank.com/individual-customer/security">Security</a></li>
-                                    <li><a href="https://www.rabitabank.com/individual-customer/partners">Partners</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="headerDowloud__right">
-                            <ul>
-                                <li><a href="https://www.rabitabank.com/individual-customer/news">News</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/cashback">Cashback</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/apple-pay-eng">Apple Pay</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/mobile-banking-en">Rabita Mobile</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/google-pay-eng">Google Pay™</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/bankchiliq-lugeti-en">Vocabulary</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/rabita-bot-eng">Rabita Bot</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/loan-calculator">Loan calculator</a></li>
-                                <li><a href="https://www.rabitabank.com/individual-customer/rabitabank-blog-eng">Blog</a></li>
-                            </ul>
-                        </div>
-                     </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="header__button--right">
-                <div class="header__search">
-                    <p>
-                        <button class="header__search--button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input placeholder="Search" class="header__search--input" type="text">
-                    </p>
-                </div>
-                <div class="header__novbe">
-                    <a href="./quest.html"><i class="fa-solid fa-calendar-week"></i> Online Queue</a>
-                </div>
-            </div>
-        </nav>
-        </div>
-
-    </header>
-
+{% block content %}
     <div class="Campaniyalar">
         <h3>Campaigns</h3>
         <div class="Campaniyalar__categories">
-            <ul>
-                <li class="category-btn active" data-category="all">All campaigns</li>
-                <li class="category-btn" data-category ="Loans" >Loans</li>
-                <li class="category-btn" data-category ="Deposits" >Deposits</li>
-            </ul>
-        </div>  
-        <ul class="productList">
+
+            <form method="get" action="/Campaigns">
+                <input {% if category == "All campaigns" %} class ='category-btn active' {%else%} class="category-btn" {%endif%}  type="submit" name="category" value="All campaigns" >
+                <input {% if category == "Loans" %} class ='category-btn active' {%else%} class="category-btn" {%endif%} type="submit" name="category" value="Loans">
+                <input {% if category == "Deposits" %} class ='category-btn active' {%else%} class="category-btn" {%endif%} type="submit" name="category" value="Deposits">
+            </form>
             
-        </ul>
+        </div> 
+         <ul class="productList">
+                {% for product in products %}
+                <li>
+                    <a class="productList__Item" href="/Campaigns/{{product.id}}">
+                        <div class="productList__Item--left">
+                            <span>{{product.date}}</span>
+                            <h3>{{product.name}}</h3>
+                            <p>{{product.title}}</p>
+                        </div>
+                        <div class="productList__Item--right">
+                            <img src="{{product.image_url}}" alt="">
+                        </div>
+                    </a>
+                </li>
+                    
+                {% endfor %}
+            </ul>
     </div>
   
-    
-    <script src="../main/home.js"></script>
-    <script src="../main/Campaigns.js"></script>
-</body>
-</html>
+{% endblock %}
+
+{% block script%}
+ <!-- <script src="{{url_for('static',filename = 'main/Campaigns.js')}}"></script> -->
+{% endblock%}
+    <!-- <script src="../main/home.js"></script>
+    -->

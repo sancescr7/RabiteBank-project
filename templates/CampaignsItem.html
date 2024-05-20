@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style/style.css">
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <div id="CampaniyaItem">
+
+        {% block content %}
+        {% for i in product%}
+        <div id="CampaniyaItem">
             <div class="CampaniyaItem">
         <div class="CampaniyaItem-photo">
-            <img src="../img/campaniya1.webp" alt="">
+            <img src="{{i.image_url}}" alt="">
         </div>
         <div class="CampaniyaItem-word">
-            <h3>Bahar kampaniyası</h3>
-            <p>Müştərilərimizə arzularını rahatlıqla gerçəkləşdirmək üçün nağd pul krediti üzrə "Bahar kampaniyası" təklif edirik. 🌸</p>
+            <h3>{{i.name}}</h3>
+            <p>{{i.title}}</p>
             <div class="CampaniyaItem-dedline">
                 <div class="CampaniyaItem-dedline-left">
                     <ul>
-                        <li><span>Başlanma vaxtı</span><h4>1 Mart 2024</h4></li>
-                        <li><span>Bitmə vaxtı</span><h4>21 İyun 2024</h4></li>
+                        <li><span>Başlanma vaxtı</span><h4>{{i.baslama}}</h4></li>
+                        <li><span>Bitmə vaxtı</span><h4>{{i.bitme}}</h4></li>
                     </ul>
                 </div>
                 <div class="CampaniyaItem-dedline-right">
@@ -41,6 +35,6 @@
         </div>
     </div>
     </div>
+    {%endfor%}
+        {% endblock %}
 
-</body>
-</html>
