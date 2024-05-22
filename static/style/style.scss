@@ -95,6 +95,9 @@
   // .header__top--language
 
   &__top--language {
+    select{
+      border: none
+    }
   }
 
   // .header__center
@@ -1130,4 +1133,125 @@ ul{
 
 .scaleo{
   transform: scale(1);
+}
+
+.RabitaValyuta {
+  width: 95%;
+  margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+@include mobile(){
+  display: block;
+}
+  // .RabitaValyuta__left
+
+  &__left {
+    background-color: #F1F4EE;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 40px;
+  }
+
+  // .RabitaValyuta__container
+
+  &__container {
+  }
+
+  // .RabitaValyuta__container--logo
+
+  &__container--logo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  // .RabitaValyuta__container--centr
+
+  &__container--centr {
+    table{
+      width: 100%;
+      
+      th{
+        text-align: inherit;
+        font-size: 14px;
+        opacity: .6;
+        padding: 10px;
+        padding-bottom: 20px;
+      }
+      td{
+        padding: 8px;
+      }
+      .tdBold{
+        font-weight:bold;
+      }
+      .tdCircle{
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: cadetblue;
+          left: -7px;
+          top: 16px
+        }
+      }
+      
+    }
+  }
+
+  // .RabitaValyuta__container--button
+
+  &__container--button {
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    column-gap: 20px;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  // .RabitaValyuta__container--word
+
+  &__container--word {
+    p{
+      font-size: 14px;
+    opacity: .6;
+    }
+  }
+
+  // .RabitaValyuta__container--link
+
+  &__container--link {
+    height: 100%;
+    button{
+      @include buttonGreen();
+      border: none;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+.ValyutaCheck {
+  display: flex;
+  gap: 10px;
+}
+.ValyutaLeft {
+}
+.ValyutaCentre {
+  width: 30px;
+  border-radius: 30px;
+  background: black;
+  position: relative;
+  span{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    left: 4px;
+    top: 7px;
+  }
+}
+.ValyutaRight {
 }

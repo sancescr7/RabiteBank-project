@@ -2,15 +2,46 @@ from app import app
 from flask import render_template,request,redirect
 from models import *
 from forms import *
+
 import requests
+import xml.etree.ElementTree as ET
+
 
 
 @app.route('/')
 def home():
     ScroolData = Scrool.query.all()
-    data = requests.get('https://www.cbar.az/currencies/13.07.2023.xml')
-    print(data)
-    return render_template('home.html',ScroolData = ScroolData,data = data) 
+    url = "https://www.cbar.az/currencies/13.07.2023.xml"
+    response = requests.get(url)
+    currencies = []
+
+    if response.status_code == 200:
+        # try:
+            root = ET.fromstring(response.content)
+            for valtype in root.findall('.//ValType'):
+                valtype_name = valtype.attrib.get('Type', 'Unknown Type')
+                for valute in valtype.findall('Valute'):
+                    name = valute.find('Name').text
+                    value = valute.find('Value').text
+                    # bank_selling = valute.find('BankSelling').text if valute.find('BankSelling') is not None else "N/A"
+                    currencies.append({
+                        'type': valtype_name,
+                        'name': name,
+                        'value': value,
+                        'bank_selling':  round(float(value) * 1.003,4),
+                        'satıs': round(float(value) * 1.04,4)
+                    })
+    #     except ET.ParseError as e:
+    #         print("Ошибка парсинга XML:", e)
+    # else:
+    #     print(f"Ошибка: {response.status_code}")
+    #     print("Ответ сервера:", response.text)
+    currencies
+    x = slice(4,10)
+    # print(currencies[x])
+
+    return render_template('home.html',ScroolData = ScroolData,currencies = currencies[x] ) 
+  
 
 
 

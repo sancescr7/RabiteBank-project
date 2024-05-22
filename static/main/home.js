@@ -33,11 +33,11 @@ function getNextNumber() {
 input.addEventListener('click',getNextNumber)
 
 
-getText("https://www.cbar.az/currencies/13.07.2023.xml");
+// getText("https://www.cbar.az/currencies/13.07.2023.xml");
 
-async function getText(file) {
-  let x = await fetch(file);
-  console.log(x);;
+// async function getText(file) {
+//   let x = await fetch(file);
+//   console.log(x);;
  
-}
+// }
 

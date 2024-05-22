@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block style %}
+{% extends 'base.html' %} 
+{% block style %}
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -113,10 +114,54 @@
     </div>
   </div>
 </section>
-{% for i in data %}
-<!-- <p>{{i}}</p> -->
-{{i.Valute}}
+
+<section class="RabitaValyuta">
+  <div class="RabitaValyuta__left">
+    <div class="RabitaValyuta__container">
+  
+  <div class="RabitaValyuta__container--logo">
+    <h3>Valyuta kursu</h3>
+    <div class="ValyutaCheck">
+      <div class="ValyutaLeft">Nağdsız</div>
+      <div class="ValyutaCentre"><span></span></div>
+      <div class="ValyutaRight">Nağd</div>
+    </div>
+  </div>
+  <div class="RabitaValyuta__container--centr">
+    <table>
+      <tr>
+        			
+      <th>Valyuta</th>
+      <th>Alış</th>
+      <th>Satış</th>
+      <th>Mərkəzi Bank</th>
+    </tr>
+    {% for i in currencies %}
+    <tr>
+      <td class="tdBold">{{i.name }}</td>
+      <td class="tdCircle"> {{i.value}}</td>
+      <td class="tdCircle">{{i.satıs}}</td>
+      <td class="tdCircle">{{i.bank_selling}}</td>
+    </tr>
 {%endfor%}
+    </table>
+  </div>
+  <div class="RabitaValyuta__container--button">
+    <div class="RabitaValyuta__container--word">
+      <p>Rus rublu üzrə nağd alış-satış məzənnələri yalnız Sürətli Pul Köçürmələri üzrə aparılan əməliyyatlara aiddir
+
+        Kurs 21.05.24 tarixinə qədər aktivdir.</p>
+
+    </div>
+    <div class="RabitaValyuta__container--link">
+      <button>Konvertasiya et</button>
+    </div>
+  </div>
+</div>
+  </div>
+
+</section>
+
 {% endblock %}}}
 
 <!-- Swiper JS -->
@@ -143,4 +188,5 @@
     },
   });
 </script>
+
 {% endblock%}
