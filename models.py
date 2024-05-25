@@ -1,4 +1,21 @@
 from extensions import *
+from flask_admin.contrib.sqla import ModelView
+from flask_login import UserMixin,current_user
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
+
+class User(UserMixin,db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(50),nullable = False)
+
+    def __init__(self,name) :
+        self.name = name
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
 
 class Scrool(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -62,5 +79,9 @@ class Sorgu(db.Model):
         db.session.add(self)
         db.session.commit()
 
-admin.add_view(ModelView(Scrool,db.session))
-admin.add_view(ModelView(Campaniya,db.session))
+class MyModelView(ModelView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+    
+admin.add_view(MyModelView(Scrool,db.session))
+admin.add_view(MyModelView(Campaniya,db.session))

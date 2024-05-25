@@ -2,7 +2,7 @@ from app import app
 from flask import render_template,request,redirect
 from models import *
 from forms import *
-
+from flask_login import login_user,login_required,logout_user
 import requests
 import xml.etree.ElementTree as ET
 
@@ -37,7 +37,7 @@ def home():
     #     print(f"Ошибка: {response.status_code}")
     #     print("Ответ сервера:", response.text)
     currencies
-    x = slice(4,10)
+    x = slice(4,9)
     # print(currencies[x])
 
     return render_template('home.html',ScroolData = ScroolData,currencies = currencies[x] ) 
@@ -82,3 +82,15 @@ def Quest():
             # return redirect('/')
            
     return render_template('quest.html',form = form)
+
+@app.route('/login')
+def login():
+    user = User.query.get(1)
+    login_user(user)
+    return 'logedd !'
+
+@app.route('/logout')
+@login_required
+def logo():
+    logout_user()
+    return 'user loggout !'

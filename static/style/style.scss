@@ -584,11 +584,19 @@
         width: max-content;
       }
     }
+    
   }
 
   // .FastTransition__categories--category
 
   &__categories--category {
+  }
+  // .FastTransition__categories--img
+  &__categories--img{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
   }
 }
 
