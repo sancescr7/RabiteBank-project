@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import SelectField,SubmitField,TimeField,DateField,IntegerField,FloatField,BooleanField
+from wtforms import SelectField,SubmitField,TimeField,DateField,IntegerField,RadioField
 from wtforms.validators import DataRequired, Length, NumberRange, ValidationError
 
 # def validate_yourPoint(form, field):
@@ -13,4 +13,6 @@ class SorguForm(FlaskForm):
     Time = SelectField("Select time",choices=[("10:00:00"),("12:00:00")])
     prefix = SelectField(" ",choices=[("050"),("055"),("070"),('077')])
     phone = IntegerField(' ',render_kw={'placeholder':'604 19 05'},validators = [DataRequired()])
+
+
     

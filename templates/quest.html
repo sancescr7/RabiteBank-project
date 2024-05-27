@@ -34,7 +34,6 @@
                             {{render_field(form.prefix)}}
                             {{render_field(form.phone)}}
                         </div>
-                        
                     </div>
                     <div class="SubmiteForm">
                         <input  type="submit" value="Növbəni götür">
@@ -48,3 +47,7 @@
     </div>
 
 {% endblock %}
+
+{% block script%} 
+<script src="{{url_for('static',filename = 'main/Quest.js')}}"></script>
+{% endblock%}

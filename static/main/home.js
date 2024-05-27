@@ -20,24 +20,21 @@ ofervlow.addEventListener("click",()=>{
 })
 dowloudOpen.addEventListener("click",openMenu)
 
-let currentNumber = generateRandomFiveDigitNumber();
 
-function generateRandomFiveDigitNumber() {
-    return Math.floor(10000 + Math.random() * 90000);
+
+
+
+
+const sticky = document.querySelector(".sticky");
+
+function Scrool() {
+    const verticalScroll = window.scrollY;
+    console.log(verticalScroll);
+    if (verticalScroll > 30) {
+        sticky.classList.add("is-sticky")
+    }
+    else{
+        sticky.classList.remove("is-sticky")
+    }
 }
-
-const input = document.querySelector('.SubmiteForm input')
-function getNextNumber() {
-    alert(currentNumber++); 
-}
-input.addEventListener('click',getNextNumber)
-
-
-// getText("https://www.cbar.az/currencies/13.07.2023.xml");
-
-// async function getText(file) {
-//   let x = await fetch(file);
-//   console.log(x);;
- 
-// }
-
+window.addEventListener('scroll',Scrool)
