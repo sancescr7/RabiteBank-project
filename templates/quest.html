@@ -50,4 +50,14 @@
 
 {% block script%} 
 <script src="{{url_for('static',filename = 'main/Quest.js')}}"></script>
+<script>
+    const text = document.querySelector('.text')
+    document.getElementById("myinput").oninput = function() {
+  var value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+  text.innerHTML = this.value
+  console.log(this.value);
+};
+text.innerHTML = document.getElementById("myinput").value
+</script>
 {% endblock%}

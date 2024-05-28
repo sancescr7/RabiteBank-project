@@ -151,7 +151,8 @@
 </section>
 
 <section class="RabitaValyuta">
-  <div class="RabitaValyuta__left">
+  <div class="RabitaValyutaCont">
+      <div class="RabitaValyuta__left">
     <div class="RabitaValyuta__container">
   
   <div class="RabitaValyuta__container--logo">
@@ -194,6 +195,59 @@
   </div>
 </div>
   </div>
+  <div class="RabitaValyuta__right">
+    <div class="RabitaValyuta__right--container">
+      <div class="RabitaValyuta__right--top">
+        <h3>Kredit kalkulyatoru</h3>
+      </div>
+      <div class="RabitaValyuta__right--center">
+        <div class="kreditMebleg">
+          <label for="">Kredit məbləği</label>
+          <div class="kreditInput">
+            <div class="kredit-word">
+              <div class="textAzn"></div>
+              <span>Azn</span>
+            </div>
+            
+            <input id="myMebleg" class="MyInput" min="300" max="30000" type="range" value="14850" />
+          </div>
+        </div>
+        <div class="kreditCategory">
+          <ul>
+            <li>
+              <label for="">Kredit müddəti</label>
+              <div class="kreditInput">
+                <div class="kredit-word">
+                  <div class="textAy"></div>
+                  <span>Ay</span>
+                </div>
+                
+                <input id="myAy" class="MyInput" min="2" max="48" type="range" value="25" />
+            </li>
+            <li>
+              <label for="">Faiz dərəcəsi</label>
+              <div class="kreditInput">
+                <div class="kredit-word">
+                  <div class="textDerece"></div>
+                  <span>%</span>
+                </div>
+                
+                <input id="myDerece" class="MyInput" min="11" max="25" type="range" value="18" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="RabitaValyuta__right--button">
+        <div class="RabitaValyuta__total">
+          <div class="totalKredit"><span>Aylıq ödəniş :</span>  <b><strong></strong> ₼</b></div>
+        </div>
+        <div class="RabitaValyuta__submit">
+          <button>Sifariş et</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
 </section>
 
@@ -223,5 +277,45 @@
     },
   });
 </script>
+<script>
+  const textAzn = document.querySelector('.textAzn')
+  const textAy = document.querySelector('.textAy')
+  const textDerece = document.querySelector('.textDerece')
+  const MyInput = document.querySelectorAll('.MyInput')
+  const totalKredit = document.querySelector('.totalKredit strong')
 
+document.getElementById("myMebleg").oninput = function() {
+var value = (this.value-this.min)/(this.max-this.min)*100
+this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+textAzn.innerHTML = this.value
+total =( (textAzn.textContent/textAy.textContent ) * ( textDerece.textContent / 5.9 + 100)) / 100 
+
+totalKredit.innerHTML = Math.round(total * 100) / 100
+};
+  document.getElementById("myAy").oninput = function() {
+var value = (this.value-this.min)/(this.max-this.min)*100
+this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+textAy.innerHTML = this.value
+total =( (textAzn.textContent/textAy.textContent ) * ( textDerece.textContent / 5.9 + 100)) / 100 
+
+totalKredit.innerHTML = Math.round(total * 100) / 100
+};
+  document.getElementById("myDerece").oninput = function() {
+var value = (this.value-this.min)/(this.max-this.min)*100
+this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+textDerece.innerHTML = this.value
+total =( (textAzn.textContent/textAy.textContent ) * ( textDerece.textContent / 5.9 + 100)) / 100 
+
+totalKredit.innerHTML = Math.round(total * 100) / 100
+};
+total =( (document.getElementById("myMebleg").value/ document.getElementById("myAy").value ) * ( document.getElementById("myDerece").value/ 5.9 + 100)) / 100 
+
+textAzn.innerHTML = document.getElementById("myMebleg").value
+textDerece.innerHTML = document.getElementById("myDerece").value
+textAy.innerHTML = document.getElementById("myAy").value
+totalKredit.innerHTML = Math.round(total * 100) / 100 
+
+
+// })
+</script>
 {% endblock%}

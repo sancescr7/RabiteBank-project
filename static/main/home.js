@@ -29,7 +29,6 @@ const sticky = document.querySelector(".sticky");
 
 function Scrool() {
     const verticalScroll = window.scrollY;
-    console.log(verticalScroll);
     if (verticalScroll > 30) {
         sticky.classList.add("is-sticky")
     }
@@ -38,3 +37,5 @@ function Scrool() {
     }
 }
 window.addEventListener('scroll',Scrool)
+
+

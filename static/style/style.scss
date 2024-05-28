@@ -1152,18 +1152,13 @@ ul{
 .RabitaValyuta {
   width: 95%;
   margin: 0 auto;
-display: grid;
-grid-template-columns: 1fr 1fr;
-@include mobile(){
-  display: block;
-}
+
   // .RabitaValyuta__left
 
   &__left {
     background-color: #F1F4EE;
     padding: 30px;
     border-radius: 30px;
-    margin-top: 40px;
   }
 
   // .RabitaValyuta__container
@@ -1282,4 +1277,150 @@ footer{
   width: 95%;
   margin: 0 auto;
   padding-top: 50px;
+}
+
+.MyInput {
+  background: linear-gradient(to right, #80b554 0%, #80b554 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
+  // width: 356px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+
+  width: 100%;
+  height: 7px;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.MyInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 5px solid;
+  cursor: pointer;
+}
+.RabitaValyutaCont{
+  margin-top: 50px;
+  display: grid;
+grid-template-columns: 1fr 1fr;
+column-gap: 20px;
+@include mobile(){
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+}
+.RabitaValyuta {
+
+  // .RabitaValyuta__right
+
+  &__right {
+    background-color: #f3f4f5;
+    padding: 30px;
+    border-radius: 30px;
+  }
+
+  // .RabitaValyuta__right--container
+
+  &__right--container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  // .RabitaValyuta__right--top
+
+  &__right--top {
+    h3{
+      font-size: 30px;
+    }
+  }
+
+  // .RabitaValyuta__right--center
+
+  &__right--center {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    label{
+      opacity: .7;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .RabitaValyuta__right--button
+
+  &__right--button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .RabitaValyuta__total
+
+  &__total {
+  b{
+    font-size: 24px;
+    font-weight: 800;
+  }
+  }
+
+  // .RabitaValyuta__submit
+  &__submit{
+    button{
+      @include buttonGreen();
+      outline: none;
+      padding: 15px;
+      border: none;
+    }
+    
+  }
+}
+.kreditMebleg {
+  
+}
+.kreditInput {
+  margin-top: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.kredit-word {
+  display: flex;
+  justify-content: space-between;
+}
+.textAzn {
+}
+.MyInput {
+}
+.kreditCategory {
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+.textAy {
+}
+.textDerece {
+}
+.totalKredit {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  span{
+    opacity: .5;
+    font-size: 13px;
+  }
 }
