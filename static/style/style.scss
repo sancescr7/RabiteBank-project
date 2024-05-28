@@ -444,6 +444,10 @@
 .ScroolItem {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  cursor: grab;
+  &:active{
+    cursor:grabbing;
+  }
   // .ScroolItem__left
 
   &__left {
@@ -762,7 +766,7 @@
   height: max-content;
   &:hover {
     img {
-      transform: scale(1.1);
+      transform: scale(.9);
     }
   }
   img {
@@ -976,6 +980,7 @@
 }
 .form-control{
   transition: .3s;
+  width: 100%;
   &:hover{
     border-color: green;
   }
@@ -1423,4 +1428,8 @@ column-gap: 20px;
     opacity: .5;
     font-size: 13px;
   }
+}
+
+#prefix{
+  width: 60px;
 }
