@@ -1,0 +1,251 @@
+*{
+    outline: none;
+}
+.container-emanetler h1{
+    word-spacing: .16em !important;
+    letter-spacing: .12em !important;
+    margin-left: 10px;
+    color: #4d4d4d;
+}
+
+.h2{
+    word-spacing: .16em !important;
+    letter-spacing: .12em !important;
+
+}
+.left-yazi{
+    word-spacing: .16em !important;
+
+}
+.container-etraf {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 230px;
+    margin: 0;
+    background-color: #dff2e2;
+    border-radius: 32px;
+    padding: 0 10.4rem;
+    min-height: 180px;
+    /* margin-top: 8rem; */
+    margin-left: 50px;
+    margin-right: 50px;
+   
+}
+.right-hov a{
+    list-style: none !important;
+    text-decoration: none !important;
+    color: white;
+    height: 40%;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 25px;
+    word-spacing: .16em !important;
+    letter-spacing: .12em !important;
+    background-color: rgb(12, 12, 38);
+    transition: .6s;
+    opacity: .9;
+}
+.right-hov a:hover{
+    color: black;
+    background-color: white;
+    opacity: 1;
+}
+.center-resim{
+overflow: hidden;
+}
+.center-resim img{
+    transition: .6s;
+}
+.center-resim img:hover{
+    /* transition: .1s;
+    opacity: .9; */
+    transform: scale(1.1);
+}
+.center-resim img:hover{
+    opacity: 1;
+}
+.emanetler-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container-emanetler{
+    width: 90%;
+    margin: 0 auto;
+}
+.container-praductss{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   column-gap: 20px   ;
+}
+.container-praduct{
+    padding: 23px;
+    background-color: #d8d8d8;
+    border-radius: 35px;
+    height: 320px;
+}
+.emanetler-left ul li{
+    display: flex;
+    flex-direction: column;
+}
+.emanetler-left ul{
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+    gap: 3px;
+}
+.emanetler-right img{
+    width: 79%;
+    padding: 0.4rem;
+    transition: .6s;
+}
+.emanetler-right img:hover{
+    transform: scale(1.1);
+
+}
+.emanetler-right img:hover{
+    opacity: 1;
+
+}
+.emanetler-right{
+    overflow: hidden;
+
+}
+
+.emanetle-right{
+    overflow: hidden;
+    height: 180px;
+
+}
+.emanetle-right img:hover{
+    opacity: 1;
+
+}
+.emanetle-right img:hover{
+    transform: scale(1.1);
+
+}
+.emanetle-right img{
+    /* width: 100%; */
+    transition: .6s;
+    height: 100%;
+
+}
+.emanetlerr-right{
+    overflow: hidden;
+}
+.emanetlerr-right img{
+        margin-top: 30px;
+    width: 124%;
+    transition: .6s;
+}
+.emanetlerr-right img:hover{
+    transform: scale(1.1);
+
+}
+.emanetlerr-right img:hover{
+    opacity: 1;
+
+}
+.container-kasa {
+    position: relative;
+
+}
+.container-kasa img{
+    width: 100%;
+    border-radius: 30px;
+}
+.yazi-sekil{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    word-spacing: .16em !important;
+    letter-spacing: .12em !important;
+}
+.yazi-sekil p{
+color: white;
+word-spacing: .16em !important;
+    letter-spacing: .12em !important;
+}
+.sugar{
+   
+    width: 95%;
+   
+    margin: 0 auto;
+    word-spacing: .16em !important;
+    letter-spacing: .12em !important;
+}
+.sugar-container{
+     display: grid;
+    grid-template-columns: 3fr 1fr;
+     column-gap: 20px;
+     margin: 40px 0;
+}
+.sugar-word ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 25px;
+    column-gap: 30px;
+    align-items: center;
+}
+.sugar-word ul .flexdide{
+    background: white;
+    height: 43px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 13px;
+    padding: 10px;
+    border-radius: 13px;
+
+}
+.sugar-word ul li{
+    height: 70px;
+}
+
+.sugar-left{
+    background-color: #d8d8d8;
+    border-radius: 35px;
+    padding: 41px;
+}
+.sugar-word ul .sancesdide{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+}
+.sugar-word ul .sancesdide input{
+    height: 43px;
+    border-radius: 13px;
+    border: none;
+padding-left: 10px;
+}
+.fullnumber{
+    display: flex;
+
+}
+.fullnumber input{
+    
+    border-radius: 0 13px 13px 0 !important;
+    width: 100%;
+}
+.fullnumber  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.fullnumber select{
+    border-radius: 13px 0 0 13px;
+    border: none;
+}
+.buttonn button{
+    color: white;
+    background-color: rgb(49, 173, 49);
+    border: none;
+    padding: 10px;
+    border-radius: 13px;
+}

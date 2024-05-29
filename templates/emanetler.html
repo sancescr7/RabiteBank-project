@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block style %} <link rel="stylesheet" href="{{url_for('static',filename = 'css/emanetler.css')}}"> {% endblock %} 
+{% block content %} <div class="container-emanetler">
+
+    <h1 class="h1">
+        Əmanətlər
+    </h1>
+    <br><br><br>
+    <div class="container-praductss">
+        {% for item in emanetler %}
+        <div class="container-praduct">
+            <h3>
+                {{item.name}}
+            </h3>
+            <p>
+                {{item.title}}
+            </p>
+            <div class="emanetler-bottom">
+                <div class="emanetler-left">
+                    <ul>
+                        <li> <span>Müddəti</span> <strong>{{item.muddet}} ayadək</strong></li>
+                        <li><span>Faiz dərəcəsi</span> <strong>{{item.faiz}}%</strong></li>
+                        <li> <span>Valyuta</span> <strong>{{item.valyuta}}</strong></li>
+                    </ul>
+                </div>
+                <div class="emanetle-right">
+                    <a href="https://www.rabitabank.com/ferdi/emanetler-az/universal-emanet-az"><img src="{{item.image}}" alt=""></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- <div class="container-praduct">
+            <h3>
+                Universal əmanət
+            </h3>
+            <p>
+                “Universal əmanət” ilə əmanət şərtlərini sərbəst şəkildə seçin və əlavə gəlir qazanın!
+            </p>
+            <div class="emanetler-bottom">
+                <div class="emanetler-left">
+                    <ul>
+                        <li> <span>Müddəti</span> <strong>36 ayadək</strong></li>
+                        <li><span>Faiz dərəcəsi</span> <strong>10.50%</strong></li>
+                        <li> <span>Valyuta</span> <strong>AZN/USD/EUR</strong></li>
+                    </ul>
+                </div>
+                <div class="emanetle-right">
+                    <a href="https://www.rabitabank.com/ferdi/emanetler-az/universal-emanet-az"><img src="../static/img/kasa e.webp" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-praduct">
+            <h3>
+                Uşaq yığım əmanəti
+            </h3>
+            <p>
+                Uşaq yığım əmanəti ilə faizlərinizə faiz qazandırın və sürətlə artan məbləğlə övladınızın gələcəyini qurun!
+            </p>
+            <div class="emanetler-bottom">
+                <div class="emanetler-left">
+                    <ul>
+                        <li> <span>Müddəti</span> <strong>216 ayadək</strong></li>
+                        <li><span>Faiz dərəcəsi</span> <strong>5%</strong></li>
+                        <li> <span>Valyuta</span> <strong>AZN/USD</strong></li>
+                    </ul>
+                </div>
+                <div class="emanetler-right">
+                    <a href="https://www.rabitabank.com/ferdi/emanetler-az/usaq-yigim-emaneti"><img class="yavrummmm" src="../static/img/yavrummmm.webp" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-praduct">
+            <h3>
+                Yığım əmanəti
+            </h3>
+            <p>
+                “Yığım əmanəti" ilə qazancınızı rahatlıqla artırın!
+            </p>
+            <div class="emanetler-bottom">
+                <div class="emanetler-left">
+                    <ul>
+                        <li> <span>Müddəti</span> <strong>12 ayadək</strong></li>
+                        <li><span>Faiz dərəcəsi</span> <strong>8%</strong></li>
+                        <li> <span>Valyuta</span> <strong>AZN</strong></li>
+                    </ul>
+                </div>
+                <div class="emanetlerr-right">
+                    <a href="https://www.rabitabank.com/ferdi/emanetler-az/yigim-emaneti-2"><img src="../static/img/varli kasa.webp" alt=""></a>
+                </div>
+            </div>
+        </div>  -->
+    </div>
+</div>
+<br><br><br>
+
+    
+<div class="container-etraf">
+    <div class="left-yazi">
+        <h2 class="hh">Saxlanc seyfləri</h2>
+        <p>
+            Rabitəbank qiymətlilərin saxlanması üçün saxlanc seyflərini sizə sərfəli şərtlərlə təqdim edir!
+        </p>
+    </div>
+    <div class="center-resim">
+        <img src="../static/img/saxlanc-seyf-1.webp" alt="">
+    </div>
+    <div class="right-hov">
+        <a href="https://www.rabitabank.com/ferdi/emanetler-az/saxlanc-seyfleri">Daha ətraflı</a>
+    </div>
+</div>
+<br><br><br>
+
+<!-- 
+<div data-v-1f4aefbe="" class="credits__calculator calculator__item"><div data-v-1f4aefbe="" class="calculator__desc"><h2 data-v-1f4aefbe="" class="calculator__title userway-s14-active">Əmanət üçün sorğu göndər</h2></div> <fieldset data-v-1f4aefbe=""><div data-v-1f4aefbe="" class="row align-items-end"><div data-v-1f4aefbe="" class="col-md-12"><div data-v-1f4aefbe="" class="form-group m-0"><label data-v-1f4aefbe="" class="lg userway-s14-active">Əmanətin növü</label></div></div> <div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group"><div data-v-1f4aefbe="" class="custom-radio"><input data-v-1f4aefbe="" type="radio" id="order138" name="deposit" class="d-none" value="138"> <label data-v-1f4aefbe="" for="order138" class="custom-radio__label userway-s14-active">Universal əmanət</label></div></div></div><div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group"><div data-v-1f4aefbe="" class="custom-radio"><input data-v-1f4aefbe="" type="radio" id="order139" name="deposit" class="d-none" value="139"> <label data-v-1f4aefbe="" for="order139" class="custom-radio__label userway-s14-active">Uşaq yığım əmanəti</label></div></div></div><div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group"><div data-v-1f4aefbe="" class="custom-radio"><input data-v-1f4aefbe="" type="radio" id="order2815" name="deposit" class="d-none" value="2815"> <label data-v-1f4aefbe="" for="order2815" class="custom-radio__label userway-s14-active">Yığım əmanəti</label></div></div></div><div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group"><div data-v-1f4aefbe="" class="custom-radio"><input data-v-1f4aefbe="" type="radio" id="order140" name="deposit" class="d-none" value="140"> <label data-v-1f4aefbe="" for="order140" class="custom-radio__label userway-s14-active">Saxlanc seyfləri</label></div></div></div>  <div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group form-group--info form-group--label-hide"><label data-v-1f4aefbe="" class="userway-s14-active">Adınız</label> <input data-v-1f4aefbe="" placeholder="Adınız *" name="name" type="text" class="form-control userway-s14-active"> </div></div> <div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group form-group--info form-group--label-hide"><label data-v-1f4aefbe="" class="userway-s14-active">Soyadınız</label> <input data-v-1f4aefbe="" placeholder="Soyadınız *" name="surname" type="text" class="form-control userway-s14-active"> </div></div> <div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="form-group form-group--phone form-group--label-hide"><label data-v-1f4aefbe="" class="userway-s14-active">Mobil nömrəniz</label> <div data-v-1f4aefbe="" class="position-relative"><select data-v-1f4aefbe="" class="form-control userway-s14-active"><option data-v-1f4aefbe="" value="070" class="userway-s14-active">070</option> <option data-v-1f4aefbe="" value="077" class="userway-s14-active">077</option> <option data-v-1f4aefbe="" value="050" class="userway-s14-active">050</option> <option data-v-1f4aefbe="" value="051" class="userway-s14-active">051</option> <option data-v-1f4aefbe="" value="010" class="userway-s14-active">010</option> <option data-v-1f4aefbe="" value="055" class="userway-s14-active">055</option> <option data-v-1f4aefbe="" value="099" class="userway-s14-active">099</option> <option data-v-1f4aefbe="" value="060" class="userway-s14-active">060</option></select> <input data-v-1f4aefbe="" type="text" inputmode="tel" name="phone" placeholder="123 45 67" class="form-control phone-input userway-s14-active"> </div></div></div></div> <p data-v-1f4aefbe="" class="input-info userway-s14-active">Məlumatları Azərbaycan dilində daxil edin.</p> <div data-v-1f4aefbe="" class="mt-5"> <button data-v-1f4aefbe="" class="btn"><svg data-v-1f4aefbe="" xmlns="http://www.w3.org/2000/svg" width="18" height="18" class="rotate__icon d-none"><use data-v-1f4aefbe="" xlink:href="#svg-spiner"></use></svg> <span data-v-1f4aefbe="" class="userway-s14-active">Sifariş et</span></button></div></fieldset></div> -->
+
+<!-- <div data-v-1f4aefbe="" class="col-md-4"><div data-v-1f4aefbe="" class="deposits__banner" style="background-image: url(&quot;https://www.rabitabank.com/resized/fit388x502/center/pages/138/ico-in.png&quot;);"><h2 data-v-1f4aefbe="" class="deposits__form__title text-white userway-s14-active">Universal əmanət</h2> <div data-v-1f4aefbe="" class="deposits__form__desc text-white"><p data-v-1f4aefbe="" class="userway-s14-active">Pulunuzu artırmaqla yanaşı, qazanılan faizlərin götürülməsində geniş seçim imkanınız olacaq.</p></div></div></div> -->
+
+<div class="sugar">
+    <div class="sugar-container">
+            <div class="sugar-left">
+        <div class="sugar-logo">
+            <h2>Əmanət üçün sorğu göndər</h2>
+        </div>
+        <div class="sugar-word">
+            <form  method="post"> 
+                {{form.csrf_token}}
+            <h3>
+                Əmanətin növü
+            </h3>
+            <ul class="sugar-categories">
+                {%for i in form.Radio %}
+                <li class="flexdide">
+                    {{render_field(i)}}
+                </li>
+                {%endfor%}
+                <li class="sancesdide">
+                    {{render_field(form.Name)}}
+                    
+                </li>
+                <li class="sancesdide">
+                    <!-- <label for="username">Soyadiniz*</label> -->
+                    <!-- <input id="username" type="text"> -->
+                    {{render_field(form.Sorname)}}
+                    
+                </li>
+                <li class="sancesdide">
+                    <label for="phone">Mobil nomreniz*</label>
+                    <div class="fullnumber">
+                        {{render_field(form.prefix)}}
+                        {{render_field(form.phone)}}
+                    </div>
+                    
+                </li>
+               
+            </ul>
+        <div class="buttonn">
+            <button type="submit">Sifariş Et</button>
+        </div></form>
+
+        </div>
+        
+        
+    
+</div>
+<div class="container-kasa">
+<img src="../static/img/ico-in.webp" alt="">
+<div class="yazi-sekil">
+    <h2>Universal əmanət</h2>
+    <br>
+    <p> Pulunuzu artırmaqla yanaşı, qazanılan faizlərin götürülməsində geniş seçim imkanınız olacaq.  </p>
+</div>
+</div>
+    </div>
+
+</div>   
+
+
+
+
+
+
+
+
+
+{% endblock %}
+    

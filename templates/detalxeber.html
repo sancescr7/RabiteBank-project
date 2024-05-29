@@ -1,0 +1,18 @@
+   {% extends 'base.html' %}
+    {% block style %} <link rel="stylesheet" href="{{url_for('static',filename = 'css/xeberler.css')}}"> {% endblock %} 
+    {%block content%}  <div class="container-detal">
+        {% for item in detal %}
+        <div class="content">
+            <br>
+            <span class="spa">{{ item.data }}</span>
+            <h1>{{ item.name }}</h1>
+            <p class="yyz">{{ item.title }}</p>
+          
+        </div>
+        {% endfor %}
+    </div>
+    <br><br><br>
+     {% endblock %}
+   
+    
+    

@@ -1,0 +1,74 @@
+ e1 = Emanetler( 'Universal əmanət ','“Universal əmanət” ilə əmanət şərtlərini sərbəst şəkildə seçin və əlavə gəlir qazanın!',36,10.5 ,'AZN ','https://www.rabitabank.com/resized/resize0x196/center/pages/138/285297343-588353235899703-7333212288748103418-n.png ' ) 
+
+
+
+
+
+
+
+
+ <div class="col-md-6">
+                <div class="items">
+                    <!-- <div class="left-image"> -->
+                        <a href="https://www.rabitabank.com/ferdi/xeberler/rabitabankin-istiqrazlarinin-yerlesdirilmesi-uzre-herrac-k"><img class = 'left-image' style="margin-left: 100PX;" src="../static/img/xeber.webp" alt=""></a>
+                    <!-- </div> -->
+                    <div class="right-yazi">
+                        <span class="spa">16 May, 2024</span>
+                        <br><br>
+                        <a href="" >Rabitəbankın Müşahidə Şurasında yeni təyinatlar olub</a>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="items">
+                    <!-- <div class="left-image"> -->
+                        <a href="https://www.rabitabank.com/ferdi/xeberler/rabitebank-digital-card-skins-dizayn-musabiqesi-elan-edir"><img class = 'left-image' style="margin-left: 100PX;" src="../static/img/site-cov.webp" alt=""></a>
+                    <!-- </div> -->
+                    <div class="right-yazi">
+                        <span class="spa">16 May, 2024</span>
+                        <br><br>
+                        <a href="" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident maxime sint rem voluptatem assumenda totam nihil rerum, mollitia nisi ullam reiciendis qui veritatis fugit hic! Alias debitis blanditiis consequuntur? Iusto.</a>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="items">
+                    <!-- <div class="left-image"> -->
+                        <a href="https://www.rabitabank.com/ferdi/xeberler/rabitebank-ozel-sektorun-inkisafi-uzre-islam-korporasiyasi-ile-15-milyon-abs-dollari-deyerinde-muqavile-imzalayib"><img class = 'left-image' style="margin-left: 100PX;" src="../static/img/1-14.webp" alt=""></a>
+                    <!-- </div> -->
+                    <div class="right-yazi">
+                        <span class="spa">16 May, 2024</span>
+                        <br><br>
+                        <a href="" >Rabitəbankın Müşahidə Şurasında yeni təyinatlar olub</a>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="items">
+                    <!-- <div class="left-image"> -->
+                        <a href="https://www.rabitabank.com/ferdi/xeberler/rabitabank-abs-nin-bank-of-new-york-mellon-ile-isbirliyini-muzakire-edib"><img class = 'left-image' style="margin-left: 100PX;" src="../static/img/pressnewsize-nymellon-min.webp" alt=""></a>
+                    <!-- </div> -->
+                    <div class="right-yazi">
+                        <span class="spa">16 May, 2024</span>
+                        <br><br>
+                        <a href="" >Rabitəbankın Müşahidə Şurasında yeni təyinatlar olub</a>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="items">
+                    <!-- <div class="left-image"> -->
+                        <a href="https://www.rabitabank.com/ferdi/xeberler/rabitabank-rehberliyi-abs-da-isguzar-seferde-olub"><img class = 'left-image' style="margin-left: 100PX;" src="../static/img/rrrr.webp" alt=""></a>
+                    <!-- </div> -->
+                    <div class="right-yazi">
+                        <span class="spa">16 May, 2024</span>
+                        <br><br>
+                        <a href="" >Rabitəbankın Müşahidə Şurasında yeni təyinatlar olub</a>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>

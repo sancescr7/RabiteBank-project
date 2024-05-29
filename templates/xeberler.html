@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+    {% block style %} <link rel="stylesheet" href="{{url_for('static',filename = 'css/xeberler.css')}}"> {% endblock %} 
+    {%block content%} 
+    <div class="container-xeberler">
+        <h1>Xəbərlər</h1>
+        <br>
+        <br>
+      <div class="tab">
+                <form method="get" action="/xeberler">
+            <input {% if catecory  == "Butun elanlar " %} class ='body-building body_active' {%else%} class="body-building" {%endif%} type="submit" name="catecory" value="Butun elanlar ">
+            <input {% if catecory  == "Investisiya " %} class ='body-building body_active' {%else%} class="body-building" {%endif%} type="submit" name="catecory" value="Investisiya ">
+            <input {% if catecory  == "Sosial " %} class ='body-building body_active' {%else%} class="body-building" {%endif%} type="submit" name="catecory" value="Sosial ">
+            <input {% if catecory  == "Maliyye "%} class ='body-building body_active' {%else%} class="body-building" {%endif%} type="submit" name="catecory" value="Maliyye ">
+            <input {% if catecory  == "İqtisadi " %} class ='body-building body_active' {%else%} class="body-building" {%endif%} type="submit" name="catecory" value="İqtisadi ">
+            <!-- <input type="submit" name="catecory" value="Anar"> -->
+        </form>
+      </div>
+
+        <div class="row items-container">
+            {% for item in xeberler %}
+            <div class="col-md-6">
+                <div class="items">
+                    <!-- <div class="left-image"> -->
+                        <a href="/detal/{{ item.id }}"><img class = 'left-image' style="margin-left: 100PX;" src="{{ item.image }}" alt=""></a>
+                    <!-- </div> -->
+                    <div class="right-yazi">
+                        <span class="spa">{{ item.data }}</span>
+                        <a href="">{{ item.name }}</a>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+    <br><br><br>
+
+
+
+
+    {% endblock %}
+    
+    

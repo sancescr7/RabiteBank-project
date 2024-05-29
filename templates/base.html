@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/maain.css')}}">  
+
+    {% block style %} 
+    {% endblock %} 
+
+</head>
+<body>
+    
+    {%block content%} 
+    
+    {% endblock %}
+    <div class="container">
+        <div class="footer_menu">
+            <div class="row">
+                <div class="col-2">
+                                    <p >Fərdi müştərilər</p>
+                                <ul>
+                                    <li >
+                                        <a href="https://www.rabitabank.com/ferdi/kart-sifarisi-kartlar">kartmane</a> 
+                                    </li>
+                                    <li >
+                                        <a href="https://www.rabitabank.com/ferdi/emanetler-az">əmanətlər</a> 
+                                    </li>
+                                    <li>
+                                        <a href="https://www.rabitabank.com/ferdi/kredit-sifarisi-kreditler">kreditler</a> 
+                                    </li>
+                                    <li>
+                                        <a href="">Onlayn xidmətlər</a> 
+                                    </li>
+                                    <li>
+                                        <a href="">Kampanialar</a>
+                                    </li>
+                                </ul>
+                                </div>
+                                <div class="col-2">
+                                    <p>Biznes müştərilər</p>
+                                    <ul>
+                                        <li>
+                                            <a href=""> Əmanətlər</a>
+                                        </li>
+                                        <li>
+                                            <a href=""> Kreditlər</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Plastik kartlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Bank xidmətləri</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Kampaniyalar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <p>Bank haqqında</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">Ümumi məlumat</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Strateji baxış və missiya</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Rəhbərlik</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Təşkilati struktur</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Banklararası biznes</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Risklərin idarə edilməsi</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <p>Digər</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">Yükləmələr və dəstək</a>  
+                                        </li>
+                                        <li>
+                                            <a href=""> Tender elanları</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hesabatlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Şikayət və təkliflər</a>
+                                        </li>
+                                        <li>
+                                            <a href="">F.A.Q</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <p>İnsan resursları</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">Ümumi məlumat</a>    
+                                        </li>
+                                        <li>
+                                            <a href="">Vakansiyalar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <p>Baş ofis</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Tel.: (994 12) 598 44 88</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Fax.: (994 12) 598 44 88</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Teleks: 142453 RSKBAI</a>
+                                        </li>
+                                        <li>
+                                            <a href="">133@rabitabank.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+            </div>
+
+        </div>
+        <br><br>
+
+    </div>
+    <div class="footer_contac" >
+        <ul class="footer_app">
+            <li>
+                <a href="https://apps.apple.com/us/app/rabita-mobile/id1457972986">
+                    <img src="../static/img/apple-app-store-logo.jpg" width="157" height="48" alt="App store" data-uw-rm-alt-original="App store">
+                </a>
+            </li>
+            <li>
+                <a href="https://play.google.com/store/apps/details?id=com.rabitabank">
+                    <img src="../static/img/toppng.com-android-app-store-app-store-and-android-icons-2145x1493-1.png" width="157" height="48" alt="" data-uw-rm-alt-original="Google PLay">
+                </a>
+            </li>
+            <li>
+                <a href="https://appgallery.huawei.com/app/C103228365">
+                    <img src="../static/img/app-huawei-uk-icon-2048x614-y4lce193.png" width="157" height="48" alt="App store" data-uw-rm-alt-original="AppGallery">
+                </a>
+            </li>
+        </ul>
+        <div class="footer__social" >
+            <span>
+                Bizi Izleyin
+            </span>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/rabitabank">
+                        <img src="../static/img/--02-128.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Frabitabank">
+                        <img src="../static/img/xt.png" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../static/img/Rounded_Instagram_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../static/img/youtube icon.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../static/img/Rounded_Linkedin2_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../static/img/telegram-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../static/img/Rounded_Whatsapp_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_battom">
+        <p class="userway-s14-active">
+        Rabitəbank ASC Azərbaycan Mərkəzi Bankın 136 saylı lisenziyası
+        <br>
+        əsasında fəaliyyət göstərir. © Rabitəbank 2024
+        </p>
+        <ul>
+            <li>
+                <a aria-label="site link" target="_blank" href="https://infobank.az/">
+                    <img src="https://www.rabitabank.com/images/infobank.png" width="115" height="26" alt="İnfobank">
+                    </a>
+            </li>
+            <li>
+                <a aria-label="site link" target="_blank" href="https://bizimpullar.az/">
+                    <img src="https://www.rabitabank.com/images/maliyye-portali.png" width="75" height="40" alt="Maliyyə Portalı">
+                    </a>
+            </li>
+        </ul>
+        
+    </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
