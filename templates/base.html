@@ -1,228 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Document</title> -->
+    {% block title%} {% endblock%}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename = 'css/maain.css')}}">  
-
-    {% block style %} 
-    {% endblock %} 
-
-</head>
-<body>
     
-    {%block content%} 
+    <link rel="icon" type="image/svg+xml" href="/static/img/rabitabankLogo.png" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename = 'style/style.css')}}"
+    />
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename = 'css/maain.css')}}"> -->
+    <script
+      src="https://kit.fontawesome.com/bb14fd2e01.js"
+      crossorigin="anonymous"
+    ></script>
+    {% block style %} {% endblock %}
+  </head>
+  <body>
+    <div class="ofervlow hidden"></div>
+    <header class="header">
+      <div class="header-container">
+              <nav class="header__top">
+        <div class="header__top--left">
+          <ul>
+            <li>
+              <a href="https://www.rabitabank.com/bank-haqqinda/umumi-melumat"
+                ><i class="fa-solid fa-window-maximize"></i>
+                <span>Ümumi məlumat</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.rabitabank.com/filial-ve-bankomatlar/filiallar"
+                ><i class="fa-solid fa-map-location"></i
+                ><span>Filial və bankomatlar</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="header__top--right">
+          <div class="header__top--button">
+            <a href="https://30il.rabitabank.com/">Rabitəbank 30 il</a>
+          </div>
+          <div class="header__top--dark">
+            <span><i class="fa-regular fa-sun"></i></span>
+            <!-- <i class="fa-solid fa-moon"></i> -->
+          </div>
+          <div class="header__top--language">
+            <select id="cars">
+              <option value="Aze">Aze</option>
+              <option value="Ru">Ru</option>
+              <option value="En">En</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+      <div class="sticky">
+        <nav class="header__center">
+          <div class="header__center--left">
+            <a href="/" class="header__center--logo">
+              <img src="../static/img/rabitebank-logo.svg" alt="" />
+            </a>
+            <div class="header__center--category">
+              <ul>
+                <li><i class="fa-solid fa-user"></i> <span>Personal</span></li>
+                <li>
+                  <i class="fa-solid fa-business-time"></i>
+                  <span>Business</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__center--right">
+            <ul>
+              <li class="heder-call">
+                <a href="tel:133"
+                  ><i class="fa-solid fa-phone-volume"></i> <span>133</span></a
+                >
+              </li>
+              <li class="heder-internet">
+                <a href="https://ib.rabitabank.com/InterBank/#/"
+                  ><i class="fa-regular fa-circle-right"></i>
+                  <span>İnternet Banking</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="header__button">
+          <div class="header__button--left">
+            <ul>
+              <li><a href="">Loans</a></li>
+              <li>
+                <a href=""
+                  ><img src="../static/img/header_card.webp" alt="" />Cards</a
+                >
+              </li>
+              <li><a href="/emanetler">Deposits</a></li>
+              <li class="dowloud-open">
+                <span>...</span>
+
+              </li>
+            </ul>
+          </div>
+          <div class="header__button--right">
+            <div class="header__search">
+              <p>
+                <button class="header__search--button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input
+                  placeholder="Search"
+                  class="header__search--input"
+                  type="text"
+                />
+              </p>
+            </div>
+            <div class="header__novbe">
+              <a href="/Quest" ><i class="fa-solid fa-calendar-week"></i> Online Queue</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      </div>
+
+    </header>
+    <div class="headerDowloud hidden">
+      <div class="headerDowloud__left">
+        <div class="headerDowloud__left--top">
+          <ul>
+            <li>
+              <h3>Loans</h3>
+              <a
+                href="https://www.rabitabank.com/individual-customer/loans-rabitabank/cash-loan"
+                >Cash loan</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/loans-rabitabank/mortgage-loan"
+                >Mortgage loan</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/loans-rabitabank/lombard-loan"
+                >Lombard loan</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/loans-rabitabank/special-mortgage-loan-offer-from-mida"
+                >Special mortgage loan offer from "MİDA"</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/loans-rabitabank"
+                >All loans</a
+              >
+            </li>
+            <li>
+              <h3>Cards</h3>
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmanedebet"
+                >Kartmane Debit</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en"
+                >Kartmane Credit</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmanepremium"
+                >Kartmane Premium</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmane-non-resident"
+                >Kartmane Card for Non-Residents</a
+              >
+            </li>
+            <li>
+              <a href="/emanetler"><h3>Deposits</h3></a>
+              <a
+                href="https://www.rabitabank.com/individual-customer/deposits-eng/universal-deposit-eng"
+                >Universal Deposit</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/deposits-eng/child-savings-deposit"
+                >Child savings deposit</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/deposits-eng/deposit-safes"
+                >Deposit safes</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/deposits-eng/depozit-eng-2"
+                >Savings deposit</a
+              >
+            </li>
+            <li>
+              <h3>Online services</h3>
+              <a
+                href="https://www.rabitabank.com/individual-customer/loans-rabitabank"
+                >Order a Loan</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmanedebet"
+                >Order a Card - Kartmane Debet</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en"
+                >Order a Card - Kartmane Credit</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/online-services/online-payments"
+                >Online Payments</a
+              >
+              <a href="https://ib.rabitabank.com/Azericard?lang=en"
+                >Online Loan Payment</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/online-services/sms-notifications"
+                >SMS Notifications</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/online-services/online-turn"
+                >Online Queue</a
+              >
+            </li>
+            <li>
+              <h3>Other services</h3>
+              <a
+                href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb"
+                >Money Transfers</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/other-services/settlement-and-cash-transactions"
+                >Settlement and cash transactions</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/deposits-eng/deposit-safes"
+                >Deposit safes</a
+              >
+              <a
+                href="https://www.rabitabank.com/individual-customer/other-services/insurance-services"
+              >
+                services</a
+              >
+              <a href="https://www.rabitabank.com/branches-atms"
+                >Service network</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="headerDowloud__left--button">
+          <ul>
+            <li>
+              <a
+                href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb"
+                >Money transfers</a
+              >
+            </li>
+            <li><a href="/Campaigns">Campaigns</a></li>
+            <li>
+              <a
+                href="https://www.rabitabank.com/individual-customer/security"
+                >Security</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.rabitabank.com/individual-customer/partners"
+                >Partners</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="headerDowloud__right">
+        <ul>
+          <li>
+            <a
+              href="/xeberler"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/cashback"
+              >Cashback</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/apple-pay-eng"
+              >Apple Pay</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/mobile-banking-en"
+              >Rabita Mobile</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/google-pay-eng"
+              >Google Pay™</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/bankchiliq-lugeti-en"
+              >Vocabulary</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/rabita-bot-eng"
+              >Rabita Bot</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/loan-calculator"
+              >Loan calculator</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rabitabank.com/individual-customer/rabitabank-blog-eng"
+              >Blog</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="headerMobile">
+      <div class="headerMobile__top">
+        <div class="headerMobile__top--left">
+          <ul>
+            <li>Fərdi</li>
+            <li>Biznes</li>
+            <li>Ümumi məlumat</li>
+          </ul>
+        </div>
+        <div class="headerMobile__top--right">
+          <div class="header__top--button">
+            <a href="https://30il.rabitabank.com/">30 il</a>
+          </div>
+          <div class="header__top--dark">
+            <span><i class="fa-regular fa-sun"></i></span>
+            <!-- <i class="fa-solid fa-moon"></i> -->
+          </div>
+          <div class="header__top--language">
+            <select id="cars">
+              <option value="Aze">Aze</option>
+              <option value="Ru">Ru</option>
+              <option value="En">En</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="headerMobile__center">
+        <div class="headerMobile__center--left">
+         <a href="/"> <img src="../static/img/rabitebank-logo.svg" alt="" /></a>
+        </div>
+        <div class="headerMobile__center--right">
+          <div class="BasketMenu">
+            <span class="basket-left basket"></span>
+            <span class="basket-center basket"></span>
+            <span class="basket-right basket"></span>
+          </div>
+          <div class="headerMobileDowloud">
+            <div class="header__novbe">
+              <a href="/Quest"
+                ><i class="fa-solid fa-calendar-week"></i> Online Queue</a
+              >
+            </div>
+            <div class="headerMobileDowloud__left">
+              <div class="headerMobileDowloud__left--top">
+                <ul>
+                  <li>
+                    <h3>Loans</h3>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/loans-rabitabank/cash-loan"
+                      >Cash loan</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/loans-rabitabank/mortgage-loan"
+                      >Mortgage loan</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/loans-rabitabank/lombard-loan"
+                      >Lombard loan</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/loans-rabitabank/special-mortgage-loan-offer-from-mida"
+                      >Special mortgage loan offer from "MİDA"</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/loans-rabitabank"
+                      >All loans</a
+                    >
+                  </li>
+                  <li>
+                    <h3>Cards</h3>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/cards/kartmanedebet"
+                      >Kartmane Debit</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en"
+                      >Kartmane Credit</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/cards/kartmanepremium"
+                      >Kartmane Premium</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/cards/kartmane-non-resident"
+                      >Kartmane Card for Non-Residents</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/emanetler"><h3>Deposits</h3></a>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/deposits-eng/universal-deposit-eng"
+                      >Universal Deposit</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/deposits-eng/child-savings-deposit"
+                      >Child savings deposit</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/deposits-eng/deposit-safes"
+                      >Deposit safes</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/deposits-eng/depozit-eng-2"
+                      >Savings deposit</a
+                    >
+                  </li>
+                  <li>
+                    <h3>Online services</h3>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/loans-rabitabank"
+                      >Order a Loan</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/cards/kartmanedebet"
+                      >Order a Card - Kartmane Debet</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en"
+                      >Order a Card - Kartmane Credit</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/online-services/online-payments"
+                      >Online Payments</a
+                    >
+                    <a href="https://ib.rabitabank.com/Azericard?lang=en"
+                      >Online Loan Payment</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/online-services/sms-notifications"
+                      >SMS Notifications</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/online-services/online-turn"
+                      >Online Queue</a
+                    >
+                  </li>
+                  <li>
+                    <h3>Other services</h3>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb"
+                      >Money Transfers</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/other-services/settlement-and-cash-transactions"
+                      >Settlement and cash transactions</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/deposits-eng/deposit-safes"
+                      >Deposit safes</a
+                    >
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/other-services/insurance-services"
+                    >
+                      services</a
+                    >
+                    <a href="https://www.rabitabank.com/branches-atms"
+                      >Service network</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="headerDowloud__left--button">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb"
+                      >Money transfers</a
+                    >
+                  </li>
+                  <li><a href="/Campaigns">Campaigns</a></li>
+                  <li>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/security"
+                      >Security</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.rabitabank.com/individual-customer/partners"
+                      >Partners</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="headerMobileDowloud__right">
+              <ul>
+                <li>
+                  <a href="/xeberler"
+                    >News</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/cashback"
+                    >Cashback</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/apple-pay-eng"
+                    >Apple Pay</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/mobile-banking-en"
+                    >Rabita Mobile</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/google-pay-eng"
+                    >Google Pay™</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/bankchiliq-lugeti-en"
+                    >Vocabulary</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/rabita-bot-eng"
+                    >Rabita Bot</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/loan-calculator"
+                    >Loan calculator</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.rabitabank.com/individual-customer/rabitabank-blog-eng"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% block content %} 
     
     {% endblock %}
-    <div class="container">
-        <div class="footer_menu">
-            <div class="row">
-                <div class="col-2">
-                                    <p >Fərdi müştərilər</p>
-                                <ul>
-                                    <li >
-                                        <a href="https://www.rabitabank.com/ferdi/kart-sifarisi-kartlar">kartmane</a> 
-                                    </li>
-                                    <li >
-                                        <a href="https://www.rabitabank.com/ferdi/emanetler-az">əmanətlər</a> 
-                                    </li>
-                                    <li>
-                                        <a href="https://www.rabitabank.com/ferdi/kredit-sifarisi-kreditler">kreditler</a> 
-                                    </li>
-                                    <li>
-                                        <a href="">Onlayn xidmətlər</a> 
-                                    </li>
-                                    <li>
-                                        <a href="">Kampanialar</a>
-                                    </li>
-                                </ul>
-                                </div>
-                                <div class="col-2">
-                                    <p>Biznes müştərilər</p>
-                                    <ul>
-                                        <li>
-                                            <a href=""> Əmanətlər</a>
-                                        </li>
-                                        <li>
-                                            <a href=""> Kreditlər</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Plastik kartlar</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Bank xidmətləri</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Kampaniyalar</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-2">
-                                    <p>Bank haqqında</p>
-                                    <ul>
-                                        <li>
-                                            <a href="">Ümumi məlumat</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Strateji baxış və missiya</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Rəhbərlik</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Təşkilati struktur</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Banklararası biznes</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Risklərin idarə edilməsi</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-2">
-                                    <p>Digər</p>
-                                    <ul>
-                                        <li>
-                                            <a href="">Yükləmələr və dəstək</a>  
-                                        </li>
-                                        <li>
-                                            <a href=""> Tender elanları</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Hesabatlar</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Şikayət və təkliflər</a>
-                                        </li>
-                                        <li>
-                                            <a href="">F.A.Q</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-2">
-                                    <p>İnsan resursları</p>
-                                    <ul>
-                                        <li>
-                                            <a href="">Ümumi məlumat</a>    
-                                        </li>
-                                        <li>
-                                            <a href="">Vakansiyalar</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-2">
-                                    <p>Baş ofis</p>
-                                    <ul>
-                                        <li>
-                                            <a href="">Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Tel.: (994 12) 598 44 88</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Fax.: (994 12) 598 44 88</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Teleks: 142453 RSKBAI</a>
-                                        </li>
-                                        <li>
-                                            <a href="">133@rabitabank.com</a>
-                                        </li>
-                                    </ul>
-                                </div>
-            </div>
+    <footer>
+          <div class="container">
+      <div class="footer_menu">
+          <div class="foter__menu--items">
+              <div class="footer__menu--item">
+                                  <p >Fərdi müştərilər</p>
+                              <ul>
+                                  <li >
+                                      <a href="https://www.rabitabank.com/ferdi/kart-sifarisi-kartlar">kartmane</a> 
+                                  </li>
+                                  <li >
+                                      <a href="https://www.rabitabank.com/ferdi/emanetler-az">əmanətlər</a> 
+                                  </li>
+                                  <li>
+                                      <a href="https://www.rabitabank.com/ferdi/kredit-sifarisi-kreditler">kreditler</a> 
+                                  </li>
+                                  <li>
+                                      <a href="">Onlayn xidmətlər</a> 
+                                  </li>
+                                  <li>
+                                      <a href="">Kampanialar</a>
+                                  </li>
+                              </ul>
+                              </div>
+                              <div class="footer__menu--item">
+                                  <p>Biznes müştərilər</p>
+                                  <ul>
+                                      <li>
+                                          <a href=""> Əmanətlər</a>
+                                      </li>
+                                      <li>
+                                          <a href=""> Kreditlər</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Plastik kartlar</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Bank xidmətləri</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Kampaniyalar</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="footer__menu--item">
+                                  <p>Bank haqqında</p>
+                                  <ul>
+                                      <li>
+                                          <a href="">Ümumi məlumat</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Strateji baxış və missiya</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Rəhbərlik</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Təşkilati struktur</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Banklararası biznes</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Risklərin idarə edilməsi</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="footer__menu--item">
+                                  <p>Digər</p>
+                                  <ul>
+                                      <li>
+                                          <a href="">Yükləmələr və dəstək</a>  
+                                      </li>
+                                      <li>
+                                          <a href=""> Tender elanları</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Hesabatlar</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Şikayət və təkliflər</a>
+                                      </li>
+                                      <li>
+                                          <a href="">F.A.Q</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="footer__menu--item">
+                                  <p>İnsan resursları</p>
+                                  <ul>
+                                      <li>
+                                          <a href="">Ümumi məlumat</a>    
+                                      </li>
+                                      <li>
+                                          <a href="">Vakansiyalar</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="footer__menu--item">
+                                  <p>Baş ofis</p>
+                                  <ul>
+                                      <li>
+                                          <a href="">Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Tel.: (994 12) 598 44 88</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Fax.: (994 12) 598 44 88</a>
+                                      </li>
+                                      <li>
+                                          <a href="">Teleks: 142453 RSKBAI</a>
+                                      </li>
+                                      <li>
+                                          <a href="">133@rabitabank.com</a>
+                                      </li>
+                                  </ul>
+                              </div>
+          </div>
 
-        </div>
-        <br><br>
+      </div>
+      <br><br>
 
-    </div>
-    <div class="footer_contac" >
-        <ul class="footer_app">
-            <li>
-                <a href="https://apps.apple.com/us/app/rabita-mobile/id1457972986">
-                    <img src="../static/img/apple-app-store-logo.jpg" width="157" height="48" alt="App store" data-uw-rm-alt-original="App store">
-                </a>
-            </li>
-            <li>
-                <a href="https://play.google.com/store/apps/details?id=com.rabitabank">
-                    <img src="../static/img/toppng.com-android-app-store-app-store-and-android-icons-2145x1493-1.png" width="157" height="48" alt="" data-uw-rm-alt-original="Google PLay">
-                </a>
-            </li>
-            <li>
-                <a href="https://appgallery.huawei.com/app/C103228365">
-                    <img src="../static/img/app-huawei-uk-icon-2048x614-y4lce193.png" width="157" height="48" alt="App store" data-uw-rm-alt-original="AppGallery">
-                </a>
-            </li>
-        </ul>
-        <div class="footer__social" >
-            <span>
-                Bizi Izleyin
-            </span>
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/rabitabank">
-                        <img src="../static/img/--02-128.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Frabitabank">
-                        <img src="../static/img/xt.png" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="../static/img/Rounded_Instagram_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="../static/img/youtube icon.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="../static/img/Rounded_Linkedin2_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="../static/img/telegram-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="../static/img/Rounded_Whatsapp_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer_battom">
-        <p class="userway-s14-active">
-        Rabitəbank ASC Azərbaycan Mərkəzi Bankın 136 saylı lisenziyası
-        <br>
-        əsasında fəaliyyət göstərir. © Rabitəbank 2024
-        </p>
-        <ul>
-            <li>
-                <a aria-label="site link" target="_blank" href="https://infobank.az/">
-                    <img src="https://www.rabitabank.com/images/infobank.png" width="115" height="26" alt="İnfobank">
-                    </a>
-            </li>
-            <li>
-                <a aria-label="site link" target="_blank" href="https://bizimpullar.az/">
-                    <img src="https://www.rabitabank.com/images/maliyye-portali.png" width="75" height="40" alt="Maliyyə Portalı">
-                    </a>
-            </li>
-        </ul>
-        
-    </div>
+  </div>
+  <div class="footer_contac" >
+      <ul class="footer_app">
+          <li>
+              <a href="https://apps.apple.com/us/app/rabita-mobile/id1457972986">
+                  <img src="../static/img/apple-app-store-logo.jpg" width="157" height="48" alt="App store" data-uw-rm-alt-original="App store">
+              </a>
+          </li>
+          <li>
+              <a href="https://play.google.com/store/apps/details?id=com.rabitabank">
+                  <img src="../static/img/toppng.com-android-app-store-app-store-and-android-icons-2145x1493-1.png" width="157" height="48" alt="" data-uw-rm-alt-original="Google PLay">
+              </a>
+          </li>
+          <li>
+              <a href="https://appgallery.huawei.com/app/C103228365">
+                  <img src="../static/img/app-huawei-uk-icon-2048x614-y4lce193.png" width="157" height="48" alt="App store" data-uw-rm-alt-original="AppGallery">
+              </a>
+          </li>
+      </ul>
+      <div class="footer__social" >
+          <span>
+              Bizi Izleyin
+          </span>
+          <ul>
+              <li>
+                  <a href="https://www.facebook.com/rabitabank">
+                      <img src="../static/img/--02-128.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+              <li>
+                  <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Frabitabank">
+                      <img src="../static/img/xt.png" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="../static/img/Rounded_Instagram_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="../static/img/youtube icon.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="../static/img/Rounded_Linkedin2_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="../static/img/telegram-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="../static/img/Rounded_Whatsapp_svg-64.webp" width="2%" height="2%" alt="App store" data-uw-rm-alt-original="AppGallery">
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer_battom">
+      <p class="userway-s14-active">
+      Rabitəbank ASC Azərbaycan Mərkəzi Bankın 136 saylı lisenziyası
+      <br>
+      əsasında fəaliyyət göstərir. © Rabitəbank 2024
+      </p>
+      <ul>
+          <li>
+              <a aria-label="site link" target="_blank" href="https://infobank.az/">
+                  <img src="https://www.rabitabank.com/images/infobank.png" width="115" height="26" alt="İnfobank">
+                  </a>
+          </li>
+          <li>
+              <a aria-label="site link" target="_blank" href="https://bizimpullar.az/">
+                  <img src="https://www.rabitabank.com/images/maliyye-portali.png" width="75" height="40" alt="Maliyyə Portalı">
+                  </a>
+          </li>
+      </ul>
+      
+  </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename = 'main/home.js')}}"></script>
+    <script>
+      const basket = document.querySelector(".BasketMenu");
+      const down = document.querySelector(".headerMobileDowloud ");
 
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+      function openDown() {
+        basket.classList.toggle("basketActive");
+        down.classList.toggle("scaleo");
+      }
+      basket.addEventListener("click", openDown);
+    </script>
+    {% block script%} {% endblock%}
+  </body>
 </html>

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block title%} <title>Onlayn Novbə </title> {% endblock%}
+{% block content %}
+    <div class="queue">
+        <div class="queue__logo">
+            <h3>Online Queue</h3>
+        </div>
+        
+        <div class="queue__container">
+            <div class="queue__container--left">
+                <h3>Take your queue online</h3>
+                <p>Take online queues to take advantage of convenient banking services without waiting</p>
+                <form method="post">
+                    {{form.csrf_token}}
+                    <ul>
+                        <li>
+                            {{render_field(form.Branch)}}
+                        </li>
+                        <li>
+                            {{render_field(form.Service)}}
+                        </li>
+                        <li>
+                            {{render_field(form.Date)}}
+                        </li>
+                        <li>
+                            {{render_field(form.Time)}}
+                        </li>
+                    </ul>
+                    <div class="numberInput">
+                        <label for="number">Mobil nömrəniz</label>
+                        <div class="numberInput__container">
+                           
+                            {{render_field(form.prefix)}}
+                            {{render_field(form.phone)}}
+                        </div>
+                    </div>
+                    <div class="SubmiteForm">
+                        <input  type="submit" value="Növbəni götür">
+                    </div>
+                </form>
+            </div>
+            <div class="queue__container--right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d48610.59752052127!2d49.8636405!3d40.4052542!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x40307d5d5a2c1005%3A0x5ede1cc1418ccc54!2z0JPRj9C90LTQttC70LjQuiDQnNC-0LvQuyBHyZluY2xpayBNYWxs!3m2!1d40.4001309!2d49.8529446!4m5!1s0x403087886fc97555%3A0x63d1056df10fb889!2sOlympic%20Star%2C%205A%20Yusif%20Vazir%20Chamanzaminli%2C%20Bak%C4%B1!3m2!1d40.4018266!2d49.8314397!5e0!3m2!1sru!2saz!4v1715620741472!5m2!1sru!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script%} 
+<script src="{{url_for('static',filename = 'main/Quest.js')}}"></script>
+<script>
+    const text = document.querySelector('.text')
+    document.getElementById("myinput").oninput = function() {
+  var value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+  text.innerHTML = this.value
+  console.log(this.value);
+};
+text.innerHTML = document.getElementById("myinput").value
+</script>
+{% endblock%}

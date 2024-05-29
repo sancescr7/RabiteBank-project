@@ -1,0 +1,2 @@
+s1 = Scrool('Yaşıl keşbek',100,100,20,15000,'https://www.rabitabank.com/resized/resize880/center/pages/5/kredit-sayt-banner.png')
+c1 = Campaniya('Bahar kampaniyası','21 iyuna -geder','Müştərilərimizə arzularını rahatlıqla gerçəkləşdirmək üçün nağd pul krediti üzrə "Bahar kampaniyası" təklif edirik. 🌸','1 Mart 2024','21 İyun 2024','https://www.rabitabank.com/resized/fit504x504/center/pages/2874/252x2-1-1.png','Kredit')

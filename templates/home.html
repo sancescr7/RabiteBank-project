@@ -1,0 +1,347 @@
+{% extends 'base.html' %} 
+{% block title%} <title>Rabitabank</title> {% endblock%}
+{% block style %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+{% endblock %} {% block content %}
+<div class="Scrool">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for i in ScroolData %}
+      <div class="swiper-slide">
+        <div class="ScroolItem">
+          <div class="ScroolItem__left">
+            <h3>{{i.name}}</h3>
+            <ul>
+              <li>
+                <span>Cash Out</span>
+                <h4>{{i.cash}} %</h4>
+              </li>
+              <li>
+                <span>Grace period</span>
+                <h4>{{i.gracePeriod}} days</h4>
+              </li>
+              <li>
+                <span>Card limit</span>
+                <h4>{{i.CardMin}} - {{i.CardMax}} AZN</h4>
+              </li>
+            </ul>
+            <p>
+              <a
+                href="https://www.rabitabank.com/individual-customer/cards/kartmane-kredit-en#calc"
+                >Order</a
+              >
+            </p>
+          </div>
+          <div class="ScroolItem__right">
+            <img src="{{i.image_url}}" alt="" />
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+ 
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<section class="FastTransition">
+  <div class="FastTransition__logo">
+    <h3>Fast transitions</h3>
+  </div>
+  <div class="FastTransition__categories">
+    <a
+      href="https://www.rabitabank.com/individual-customer/loans-rabitabank/cash-loan"
+      class="FastTransition__categories--category"
+    >
+    <div class="FastTransition__categories--word">
+      <h3>Cash Loans</h3>
+    </div>
+      <div class="FastTransition__categories--img">
+         <img src="../static/img/Cash.webp" alt="" />
+      </div>
+     
+    </a>
+    <a
+      href="https://www.rabitabank.com/individual-customer/deposits-eng/universal-deposit-eng"
+      class="FastTransition__categories--category"
+    >
+    <div class="FastTransition__categories--word">
+      <h3>Deposits</h3>
+      
+    </div>
+    <div class="FastTransition__categories--img">
+      <img src="../static/img/Deposit.webp" alt="" />
+
+    </div>
+    </a>
+    <a
+      href="https://www.rabitabank.com/individual-customer/cashback"
+      class="FastTransition__categories--category"
+    >
+    <div class="FastTransition__categories--word">
+      <h3>Cashback</h3>
+      
+    </div>
+    <div class="FastTransition__categories--img">
+      <img src="../static/img/Cashback.webp" alt="" />
+
+    </div>
+    </a>
+    <a
+      href="https://www.rabitabank.com/individual-customer/fastmoneytransfers-rb"
+      class="FastTransition__categories--category"
+    >
+    <div class="FastTransition__categories--word">
+      <h3>Money Transfers</h3>
+      
+    </div>
+    <div class="FastTransition__categories--img">
+      <img src="../static/img/Money.webp" alt="" />
+
+    </div>
+    </a>
+    <a
+      href="https://www.rabitabank.com/individual-customer/campaigns"
+      class="FastTransition__categories--category"
+    >
+    <div class="FastTransition__categories--word">
+      <h3>Campaigns</h3>
+      
+    </div>
+    <div class="FastTransition__categories--img">
+      <img src="../static/img/Campaigns.webp" alt="" />
+
+    </div>
+    </a>
+    <a
+      href="https://www.rabitabank.com/individual-customer/cards/kartmanepremium"
+      class="FastTransition__categories--category premium"
+    >
+    <div class="FastTransition__categories--word">
+      <h3>Kartname Premium</h3>
+      
+    </div>
+    <div class="FastTransition__categories--img">
+      <img src="../static/img/Kartname.webp" alt="" />
+
+    </div>
+    </a>
+  </div>
+</section>
+<section class="RabitaMobile">
+  <div class="RabitaMobile__container">
+    <div class="RabitaMobile__container--left">
+      <h3>Rabita Mobile</h3>
+      <p>
+        Experience seamless and secure banking on your smartphone or tablet by
+        downloading our Banking App - Rabita Mobile!
+      </p>
+      <div class="qrKod">
+        <img src="../static/img/qrkod.png" alt="" />
+        <span>Scan a QR code with your camera</span>
+      </div>
+    </div>
+    <div class="RabitaMobile__container--right">
+      <img src="../static/img/mobile_basic.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<section class="RabitaValyuta">
+  <div class="RabitaValyutaCont">
+      <div class="RabitaValyuta__left">
+    <div class="RabitaValyuta__container">
+  
+  <div class="RabitaValyuta__container--logo">
+    <h3>Valyuta kursu</h3>
+    <div class="ValyutaCheck">
+      <div class="ValyutaLeft">Nağdsız</div>
+      <div class="ValyutaCentre"><span></span></div>
+      <div class="ValyutaRight">Nağd</div>
+    </div>
+  </div>
+  <div class="RabitaValyuta__container--centr">
+    <table>
+      <tr>
+        			
+      <th>Valyuta</th>
+      <th>Alış</th>
+      <th>Satış</th>
+      <th>Mərkəzi Bank</th>
+    </tr>
+    {% for i in currencies %}
+    <tr>
+      <td class="tdBold">{{i.name }}</td>
+      <td class="tdCircle"> {{i.value}}</td>
+      <td class="tdCircle">{{i.satıs}}</td>
+      <td class="tdCircle">{{i.bank_selling}}</td>
+    </tr>
+{%endfor%}
+    </table>
+  </div>
+  <div class="RabitaValyuta__container--button">
+    <div class="RabitaValyuta__container--word">
+      <p>Rus rublu üzrə nağd alış-satış məzənnələri yalnız Sürətli Pul Köçürmələri üzrə aparılan əməliyyatlara aiddir
+
+        Kurs 21.05.24 tarixinə qədər aktivdir.</p>
+
+    </div>
+    <div class="RabitaValyuta__container--link">
+      <button>Konvertasiya et</button>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="RabitaValyuta__right">
+    <div class="RabitaValyuta__right--container">
+      <div class="RabitaValyuta__right--top">
+        <h3>Kredit kalkulyatoru</h3>
+      </div>
+      <div class="RabitaValyuta__right--center">
+        <div class="kreditMebleg">
+          <label for="">Kredit məbləği</label>
+          <div class="kreditInput">
+            <div class="kredit-word">
+              <div class="textAzn"></div>
+              <span>Azn</span>
+            </div>
+            
+            <input id="myMebleg" class="MyInput" min="300" max="30000" type="range" value="14850" />
+          </div>
+        </div>
+        <div class="kreditCategory">
+          <ul>
+            <li>
+              <label for="">Kredit müddəti</label>
+              <div class="kreditInput">
+                <div class="kredit-word">
+                  <div class="textAy"></div>
+                  <span>Ay</span>
+                </div>
+                
+                <input id="myAy" class="MyInput" min="2" max="48" type="range" value="25" />
+            </li>
+            <li>
+              <label for="">Faiz dərəcəsi</label>
+              <div class="kreditInput">
+                <div class="kredit-word">
+                  <div class="textDerece"></div>
+                  <span>%</span>
+                </div>
+                
+                <input id="myDerece" class="MyInput" min="11" max="25" type="range" value="18" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="RabitaValyuta__right--button">
+        <div class="RabitaValyuta__total">
+          <div class="totalKredit"><span>Aylıq ödəniş :</span>  <b><strong></strong> ₼</b></div>
+        </div>
+        <div class="RabitaValyuta__submit">
+          <button>Sifariş et</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</section>
+
+<div class="rabitebot">
+  <div class="container-rabitebot">
+      <div class="rabitebot-left">
+          <div class="rabitebot-image">
+              <img  src="../static/img/bot-new.webp" alt="">
+          </div>
+          <div class="rabitebot-yazi">
+              <div class="yazii">
+             <h3>
+              Rabita Bot
+             </h3>
+             <p class="yazi">RabitəBot ilə bank xidmətlərindən
+               24/7 rahat və sürətli faydalana 
+               bilərsiniz!</p>
+               </div>
+          </div>
+      </div> 
+      <div class="rabitebot-right">
+          <div class="botimage">
+          <img src="https://www.rabitabank.com/resized/resize1012/center/pages/1/bot-text-new2.png" alt="">
+          </div>
+      </div> 
+  </div>
+  
+</div>
+{% endblock %}}}
+
+<!-- Swiper JS -->
+
+<!-- Initialize Swiper -->
+
+{% block script%}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<script>
+  const textAzn = document.querySelector('.textAzn')
+  const textAy = document.querySelector('.textAy')
+  const textDerece = document.querySelector('.textDerece')
+  const MyInput = document.querySelectorAll('.MyInput')
+  const totalKredit = document.querySelector('.totalKredit strong')
+
+document.getElementById("myMebleg").oninput = function() {
+var value = (this.value-this.min)/(this.max-this.min)*100
+this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+textAzn.innerHTML = this.value
+total =( (textAzn.textContent/textAy.textContent ) * ( textDerece.textContent / 5.9 + 100)) / 100 
+
+totalKredit.innerHTML = Math.round(total * 100) / 100
+};
+  document.getElementById("myAy").oninput = function() {
+var value = (this.value-this.min)/(this.max-this.min)*100
+this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+textAy.innerHTML = this.value
+total =( (textAzn.textContent/textAy.textContent ) * ( textDerece.textContent / 5.9 + 100)) / 100 
+
+totalKredit.innerHTML = Math.round(total * 100) / 100
+};
+  document.getElementById("myDerece").oninput = function() {
+var value = (this.value-this.min)/(this.max-this.min)*100
+this.style.background = 'linear-gradient(to right, #80b554 0%, #80b554 ' + value + '%, #fff ' + value + '%, white 100%)'
+textDerece.innerHTML = this.value
+total =( (textAzn.textContent/textAy.textContent ) * ( textDerece.textContent / 5.9 + 100)) / 100 
+
+totalKredit.innerHTML = Math.round(total * 100) / 100
+};
+total =( (document.getElementById("myMebleg").value/ document.getElementById("myAy").value ) * ( document.getElementById("myDerece").value/ 5.9 + 100)) / 100 
+
+textAzn.innerHTML = document.getElementById("myMebleg").value
+textDerece.innerHTML = document.getElementById("myDerece").value
+textAy.innerHTML = document.getElementById("myAy").value
+totalKredit.innerHTML = Math.round(total * 100) / 100 
+
+
+// })
+</script>
+{% endblock%}
