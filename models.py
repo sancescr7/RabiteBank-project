@@ -63,6 +63,12 @@ class EmanetlerSorgu(db.Model):
         self.Radio = Radio
         self.Name = Name
         self.Sorname = Sorname
+        self.Phone = Phone
+        
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
 
 class Scrool(db.Model):
     id = db.Column(db.Integer, primary_key=True)

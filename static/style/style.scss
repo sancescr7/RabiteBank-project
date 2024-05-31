@@ -579,7 +579,7 @@ p{
 
       &:hover {
         img {
-          transform: scale(1.1);
+          transform: scale(.9);
         }
       }
       // row-gap: 20px;
@@ -1476,6 +1476,12 @@ column-gap: 20px;
   background-color: #dff2e2;
   border-radius: 32px;
   min-height: 180px;
+  @include mobile(){
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    padding: 35px;
+  }
  
 }
 .right-hov a{
@@ -1506,7 +1512,7 @@ overflow: hidden;
 .center-resim img:hover{
   /* transition: .1s;
   opacity: .9; */
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 .center-resim img:hover{
   opacity: 1;
@@ -1548,7 +1554,7 @@ overflow: hidden;
   transition: .6s;
 }
 .emanetler-right img:hover{
-  transform: scale(1.1);
+  transform: scale(.9);
 
 }
 .emanetler-right img:hover{
@@ -1570,7 +1576,7 @@ overflow: hidden;
 
 }
 .emanetle-right img:hover{
-  transform: scale(1.1);
+  transform: scale(.9);
 
 }
 .emanetle-right img{
@@ -1588,7 +1594,7 @@ overflow: hidden;
   transition: .6s;
 }
 .emanetlerr-right img:hover{
-  transform: scale(1.1);
+  transform: scale(.9);
 
 }
 .emanetlerr-right img:hover{
